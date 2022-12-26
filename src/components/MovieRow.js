@@ -20,6 +20,7 @@ export default function MovieRow({ title, items }) {
 }
 
 const MovieListArea = styled.div`
+  overflow-x: hidden;
 
 `
 
@@ -28,6 +29,8 @@ const MovieList = styled.div`
 `
 
 const MovieItem = styled.div`
+
+  display: inline-block;
 
 `
 
