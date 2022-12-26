@@ -7,9 +7,14 @@ const basicFetch = async(endpoint)=>{
     // const req = await fetch(`${APIBASE}${endpoint}`)
     // const json = req.json
     // return json
-    const req = await axios.get(`${APIBASE}${endpoint}`)
-    const response = await req.data
-    return response
+    try {
+        const req = await axios.get(`${APIBASE}${endpoint}`)
+        const response = await req.data
+        return response
+        
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 
