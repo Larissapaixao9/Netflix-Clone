@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import MovieClicked from './MovieClicked'
 
 export default function MovieRow({ title, items }) {
   
@@ -9,7 +10,7 @@ export default function MovieRow({ title, items }) {
       <MovieListArea>
         <MovieList>
         { items.results.length>0 && items.results.map((item, key)=>(
-          <MovieItem>
+          <MovieItem onClick={()=><MovieClicked title={item.name}/>}>
             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt='poster' key={key}/>
           </MovieItem>
         )) }
