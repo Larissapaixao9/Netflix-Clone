@@ -25,12 +25,17 @@ const MovieListArea = styled.div`
 `
 
 const MovieList = styled.div`
-
+  width: 6249999.9375rem;
 `
 
 const MovieItem = styled.div`
 
   display: inline-block;
+  width: 9.375rem;
+
+  img{
+    width: 100%;
+  }
 
 `
 

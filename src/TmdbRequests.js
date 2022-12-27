@@ -4,9 +4,6 @@ const APIKEY = '5ab71d01fe1d667feb4a63b2e48a5257'
 const APIBASE = 'https://api.themoviedb.org/3'
 
 const basicFetch = async(endpoint)=>{
-    // const req = await fetch(`${APIBASE}${endpoint}`)
-    // const json = req.json
-    // return json
     try {
         const req = await axios.get(`${APIBASE}${endpoint}`)
         const response = await req.data
