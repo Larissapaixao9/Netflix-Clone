@@ -21,7 +21,7 @@ export default function MovieRow({ title, items }) {
 
 const MovieListArea = styled.div`
   overflow-x: hidden;
-
+  padding-left: 1.875rem;
 `
 
 const MovieList = styled.div`
@@ -32,9 +32,16 @@ const MovieItem = styled.div`
 
   display: inline-block;
   width: 9.375rem;
+  cursor: pointer;
 
   img{
     width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+
+    :hover{
+      transform: scale(1);
+    }
   }
 
 `
