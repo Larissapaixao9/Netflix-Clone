@@ -61,4 +61,25 @@ export default async function TmdbRequests() {
   ]
 }
 
+export async function getMovieInfo(movieId, type){
+    let info = {}
+
+    if(movieId){
+        switch(type){
+            case 'movie':
+                info = await basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${APIKEY}`)
+                break;
+
+            case 'tv':
+                info = await basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${APIKEY}`)
+                break
+
+            default:
+
+        }
+    }
+
+    return info;
+}
+
 

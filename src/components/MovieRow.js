@@ -1,16 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-//import MovieClicked from './MovieClicked'
+import MovieContext from '../contexts/MovieContext'
+import { useNavigate } from "react-router-dom";
 
 export default function MovieRow({ title, items }) {
-  
+  const clickedMovieContext = React.useContext(MovieContext)
+  const navigate = useNavigate()
+  const { setMovieInfo } = clickedMovieContext
+
+  function ifMovedCLicked(name){
+    console.log(name)
+    setMovieInfo(name)
+    navigate('/clickedMovie')
+  }
+
   return (
     <MovieRowGlobalStyle>
       <h2>{ title }</h2>
       <MovieListArea>
         <MovieList>
         { items.results.length>0 && items.results.map((item, key)=>(
-          <MovieItem onClick={()=>console.log( item.name )}>
+          <MovieItem onClick={()=>ifMovedCLicked(item.name)}>
             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt='poster' key={key}/>
           </MovieItem>
         )) }
