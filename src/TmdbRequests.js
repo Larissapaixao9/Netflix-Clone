@@ -71,7 +71,7 @@ export async function getMovieInfo(movieId, type){
                 break;
 
             case 'tv':
-                info = await basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${APIKEY}`)
+                info = await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${APIKEY}`)
                 break
 
             default:
