@@ -4,6 +4,7 @@ import MovieRow from './MovieRow';
 import FeaturedMovie from './FeaturedMovie';
 import { getMovieInfo } from '../TmdbRequests';
 export default function Page() {
+    
     const [movieList,setMovieList] = React.useState([])
     const [featureData, setFeatureData] = React.useState(null)
 
