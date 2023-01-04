@@ -91,21 +91,28 @@ const FeaturedPoints = styled.div`
     color: #46d369;
     display: inline-block;
     background-color: transparent;
+    margin-right: 0.9375rem;
 `
 
 const FeaturedYear = styled.div`
     color: #FFF;
     background-color: transparent;
+    display: inline-block;
+    margin-right: 0.9375rem;
 `
 
 const FeaturedSeasons = styled.div`
     color: #FFF;
     background-color: transparent;
+    display: inline-block;
+    margin-right: 0.9375rem;
 `
 
 const FeaturedButtons = styled.div`
     color: #FFF;
     background-color: transparent;
+    margin-top: 0.9375rem;
+
 `
 
 
@@ -117,4 +124,8 @@ const FeaturedGenres = styled.div`
 const FeaturedDescriptions = styled.div`
     color: #FFF;
     background-color: transparent;
+    margin-top: 0.9375rem;
+    font-size: 1.25rem;
+    color: #999;
+    max-width: 40%;
 `
